@@ -2,15 +2,15 @@ import React from 'react';
 import CommentsContainer from '../containers/CommentsContainer';
 
 const Movie = (props) => {
+    debugger
     console.log(props)
 
-    let movie = props.movies.filter(movie => movie.id === props.match.params.id)[0]
+    let movie = props.movies.filter(movie => movie.id == props.match.params.id)[0]
 
     return (
         <div>
-            <h2>
-                {movie ? movie.title : null}
-            </h2>
+              <p>  You're in the Movie detail.</p>
+                {/* {movie ? movie.title : null} */}
             <CommentsContainer movie={movie}/><br/>
             
         </div>

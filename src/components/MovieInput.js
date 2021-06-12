@@ -7,7 +7,7 @@ class MovieInput extends React.Component {
     state = {
         title: '',
         description: '',
-        genre_id: '',
+        genre: '',
         year_released: '',
         image_link: ''
     }
@@ -24,7 +24,7 @@ class MovieInput extends React.Component {
         this.setState({
             title: '',
             description: '',
-            genre_id: '',
+            genre: '',
             year_released: '',
             image_link: '' 
         })
@@ -39,6 +39,20 @@ class MovieInput extends React.Component {
                     <label>Description:</label>
                     <input type='text' placeholder='Description' value={this.state.description} name='description' onChange={this.handleChange}/><br/>
                     <label>Genre:</label>
+                    <select name="genre" value={this.state.genre} onChange={this.handleChange}>
+                        <option>Action Adventure</option>                        
+                        <option>Comedy</option>
+                        <option>Science Fiction</option>
+                        <option>Drama</option>
+                        <option>Horror</option>
+                        <option>Documentary</option>
+                        <option>Fantasy</option>
+                    </select>
+
+                    
+                    
+                    
+                    
                     <input type='text' placeholder='Genre' value={this.state.title} name='genre_id' onChange={this.handleChange}/><br/>
                     <label>Year Released:</label>
                     <input type='text' placeholder='Year Released' value={this.state.title} name='year_released' onChange={this.handleChange}/><br/>
