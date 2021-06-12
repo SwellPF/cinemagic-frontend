@@ -47,13 +47,7 @@ class MovieInput extends React.Component {
                         <option>Horror</option>
                         <option>Documentary</option>
                         <option>Fantasy</option>
-                    </select>
-
-                    
-                    
-                    
-                    
-                    <input type='text' placeholder='Genre' value={this.state.title} name='genre_id' onChange={this.handleChange}/><br/>
+                    </select><br/>
                     <label>Year Released:</label>
                     <input type='text' placeholder='Year Released' value={this.state.title} name='year_released' onChange={this.handleChange}/><br/>
                     <label>Image URL:</label>
