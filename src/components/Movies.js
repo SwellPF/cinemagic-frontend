@@ -9,7 +9,7 @@ const Movies = (props) => {
             Movies
             {props.movies.map(movie =>
                 <li key={movie.id}>
-                    <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+                    <Link to={`/movies/${movie.id}`}>{movie.title} - {movie.genre} - {movie.year_released}</Link>
                 </li>)}
         </div>
     )
