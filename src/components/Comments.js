@@ -1,5 +1,6 @@
 import React from 'react';
 import Comment from './Comment';
+import {deleteComment} from '../actions/deleteComment';
 
 class Comments extends React.Component {
     render() {
