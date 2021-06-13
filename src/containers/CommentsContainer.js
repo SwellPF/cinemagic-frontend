@@ -1,6 +1,7 @@
 import React from 'react';
 import CommentInput from '../components/CommentInput';
 import Comments from '../components/Comments';
+import {connect} from 'react-redux';
 
 class CommentsContainer extends React.Component {
 
@@ -14,4 +15,15 @@ class CommentsContainer extends React.Component {
     }
 }
 
-export default CommentsContainer
+const mapStateToProps = state => {
+    return {
+        comments: state.comments
+    }
+}
+
+const mapDispatchToProps = dispatch => ({
+    addComment: comment => dispatch({type: 'ADD_COMMENT', comment}),
+    deleteComment: id => dispatch({type: 'DELETE_COMMENT', id})
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(CommentsContainer);
