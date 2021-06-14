@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {addComment} from '../actions/addComment';
 
 class CommentInput extends React.Component {
     state = {
@@ -12,6 +14,7 @@ class CommentInput extends React.Component {
     }
 
     handleSubmit = (event) => {
+        debugger
         event.preventDefault();
         this.props.addComment({content: this.state.content, movie_id: this.props.movie.id})
         this.setState({
@@ -24,7 +27,7 @@ class CommentInput extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>Add Comment:</label>
-                    <input type='text' onChange={this.handleChange} value={this.state.content}/>
+                    <input type='text' name='content' onChange={this.handleChange} value={this.state.content}/>
                     <input type='submit'/>
                 </form>
             </div>
@@ -32,4 +35,4 @@ class CommentInput extends React.Component {
     }
 };
 
-export default CommentInput;
+export default connect(null, {addComment})(CommentInput);

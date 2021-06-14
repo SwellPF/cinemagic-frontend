@@ -1,10 +1,11 @@
 import React from 'react';
 
 const Comments = (props) => {
+    // debugger
     return (
         <div>
             {props.comments.map(comment =>
-                <li key={comment.content}>
+                <li key={comment.id}>{comment.content}
                 </li>)}
         </div>
     )

@@ -2,10 +2,9 @@ import React from 'react';
 import CommentsContainer from '../containers/CommentsContainer';
 
 const Movie = (props) => {
-    console.log(props)
+    // console.log(props)
     let movie = props.movies.filter(movie => movie.id == props.match.params.id)[0]
     console.log(movie)
-    debugger
 
     return (
         <div>
@@ -16,10 +15,10 @@ const Movie = (props) => {
             <p><b>Year Released:</b> {movie.year_released}</p>
 
            <b>Comments:</b>
-           {movie.comments.map(comment =>
+           {/* {movie.comments.map(comment =>
                 <li>{comment.content}
-                </li>)}       
-          {/* <CommentsContainer movie={movie} comments={movie.comments}/> */}
+                </li>)}        */}
+          <CommentsContainer movie={movie}/>
         </div>
     )
 }

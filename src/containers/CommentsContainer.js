@@ -4,12 +4,12 @@ import Comments from '../components/Comments';
 import {connect} from 'react-redux';
 
 class CommentsContainer extends React.Component {
-debugger
+// debugger
     render() {
         return (
             <div>
                 <CommentInput movie={this.props.movie}/><br/>
-                <Comments comments={this.props.movie && this.props.movie.commments}/>
+                <Comments comments={this.props.movie.comments}/>
             </div>
         )
     }
