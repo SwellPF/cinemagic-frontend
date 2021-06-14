@@ -9,7 +9,7 @@ class CommentsContainer extends React.Component {
         return (
             <div>
                 <CommentInput movie={this.props.movie}/><br/>
-                <Comments comments={this.props.movie && this.props.movie.commments}/>
+                <Comments comments={this.props.movie && this.props.movie.commments} deleteComment={this.deleteComment}/>
             </div>
         )
     }
@@ -23,7 +23,11 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
     addComment: comment => dispatch({type: 'ADD_COMMENT', comment}),
-    deleteComment: id => dispatch({type: 'DELETE_COMMENT', id})
+    deleteComment: id => dispatch({type: 'DELETE_COMMENT', id}),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CommentsContainer);
+
+CommentsContainer.defaultProps = {
+    user_id: 1
+  }

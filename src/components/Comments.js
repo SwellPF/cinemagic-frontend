@@ -1,10 +1,10 @@
 import React from 'react';
 import Comment from './Comment';
-import {deleteComment} from '../actions/deleteComment';
 
 class Comments extends React.Component {
+    debugger
     render() {
-        const {comments, movieId, deleteComment} = this.props;
+        const {comments, movie} = this.props;
         const associatedComments = comments.filter(comment => comment.movieId === movieId);
 
         const commentList = associatedComments.map((comment,index) => {
