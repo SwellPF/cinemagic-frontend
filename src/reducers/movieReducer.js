@@ -15,9 +15,6 @@ export default function movieReducer(state = {movies: [], comments: [],}, action
             const comments = state.comments.filter(comment => comment.id !== action.id)
                 return {...state, comments}
 
-        case 'FETCH_MOVIES':
-            return {comments: action.payload}
-
         default:
             return state
 
