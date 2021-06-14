@@ -1,26 +1,14 @@
 import React from 'react';
-import Comment from './Comment';
 
-class Comments extends React.Component {
-    debugger
-    render() {
-        const {comments, movie} = this.props;
-        const associatedComments = comments.filter(comment => comment.movieId === movieId);
-
-        const commentList = associatedComments.map((comment,index) => {
-            return <Comment
-                key={index}
-                comment={comment}
-                />
-        });
-
-        return(
-            <div><ul>
-                {commentList}
-                </ul>
-            </div>
-        );
-    }
-};
+const Comments = (props) => {
+    return (
+        <div>
+            {props.comments.map(comment =>
+                <li key={comment.content}>
+                </li>)}
+        </div>
+    )
+}
+    
 
 export default Comments;

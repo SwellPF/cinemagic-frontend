@@ -13,7 +13,7 @@ class CommentInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.addComment({content: this.state.content, movieId: this.props.movieId})
+        this.props.addComment({content: this.state.content, movie_id: this.props.movie.id})
         this.setState({
             content: '',
         })

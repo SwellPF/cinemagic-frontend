@@ -4,12 +4,12 @@ import Comments from '../components/Comments';
 import {connect} from 'react-redux';
 
 class CommentsContainer extends React.Component {
-
+debugger
     render() {
         return (
             <div>
                 <CommentInput movie={this.props.movie}/><br/>
-                <Comments comments={this.props.movie && this.props.movie.commments} deleteComment={this.deleteComment}/>
+                <Comments comments={this.props.movie && this.props.movie.commments}/>
             </div>
         )
     }
@@ -23,7 +23,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
     addComment: comment => dispatch({type: 'ADD_COMMENT', comment}),
-    deleteComment: id => dispatch({type: 'DELETE_COMMENT', id}),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CommentsContainer);
