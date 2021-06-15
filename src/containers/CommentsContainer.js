@@ -17,7 +17,7 @@ class CommentsContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        comments: state.comments
+        comments: state.movies.comments
     }
 }
 

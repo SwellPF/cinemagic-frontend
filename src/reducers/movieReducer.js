@@ -8,13 +8,19 @@ export default function movieReducer(state = {movies: [], comments: [],}, action
 
         case 'ADD_COMMENT':
             debugger
-            const comment = {content: action.comment.content, movieId: action.comment.movieId};
-            return {
-                ...state, comments: [...state.comments, comment]}
+            const movies = state.movies.map(movie => {
+                if (movie.id === action.payload.movie_id) {
+                    return action.payload
+                } else {
+                    return movie
+                }
+            })
+            return {...state, movies: movies}
 
-        case 'DELETE_COMMENT':
-            const comments = state.comments.filter(comment => comment.id !== action.id)
-                return {...state, comments}
+
+        // case 'DELETE_COMMENT':
+        //     const comments = state.comments.filter(comment => comment.id !== action.id)
+        //         return {...state, comments}
 
         default:
             return state

@@ -15,9 +15,6 @@ const Movie = (props) => {
             <p><b>Year Released:</b> {movie.year_released}</p>
 
            <b>Comments: </b>({movie.comments.length})<br/><br/>
-           {/* {movie.comments.map(comment =>
-                <li>{comment.content}
-                </li>)}        */}
           <CommentsContainer movie={movie}/>
         </div>
     )
