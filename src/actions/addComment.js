@@ -1,6 +1,7 @@
-export const addComment = (content, movieId) => {
+export const addComment = (content) => {
+    debugger
     return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/movies/${movieId}/comments`, {
+        fetch(`http://localhost:3000/api/v1/comments`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
@@ -9,6 +10,6 @@ export const addComment = (content, movieId) => {
             body: JSON.stringify(content)
         })
         .then(response => response.json())
-        .then(movie => dispatch({type: 'ADD_COMMENT', payload: movie}))
+        .then(movie => dispatch({type: 'ADD_COMMENT', payload: content}))
     }
 }

@@ -7,6 +7,7 @@ export default function movieReducer(state = {movies: [], comments: [],}, action
             return {...state, movies: [...state.movies, action.payload]}
 
         case 'ADD_COMMENT':
+            debugger
             const comment = {content: action.comment.content, movieId: action.comment.movieId};
             return {
                 ...state, comments: [...state.comments, comment]}

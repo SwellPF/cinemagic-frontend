@@ -11,10 +11,10 @@ const Movie = (props) => {
             <br/><img src={movie.image_link} alt='movie-poster'/><br/>
             <h2>{movie.title}</h2><br/>
             <h4>Description:</h4> {movie.description}
-            <p><b>Genre:</b> {movie.genre_id}</p>
+            <p><b>Genre:</b> {movie.genre_name}</p>
             <p><b>Year Released:</b> {movie.year_released}</p>
 
-           <b>Comments:</b>
+           <b>Comments: </b>({movie.comments.length})<br/><br/>
            {/* {movie.comments.map(comment =>
                 <li>{comment.content}
                 </li>)}        */}
