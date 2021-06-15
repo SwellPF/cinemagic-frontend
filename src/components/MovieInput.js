@@ -40,7 +40,7 @@ class MovieInput extends React.Component {
                     <label>Title:</label>
                     <input type='text' placeholder='Movie Title' value={this.state.title} name='title' onChange={this.handleChange}/><br/>
                     <label>Description:</label>
-                    <input type='textarea' placeholder='Description' value={this.state.description} name='description' onChange={this.handleChange}/><br/>
+                    <input type='textarea' size="60" placeholder='Description' value={this.state.description} name='description' onChange={this.handleChange}/><br/>
                     <label>Genre:</label>
                     <select name="genre_id" onChange={this.handleChange}>
                         <option value='1' >Action Adventure</option>                        

@@ -9,7 +9,7 @@ const Movie = (props) => {
     return (
         <div>
             <br/><img src={movie.image_link} alt='movie-poster'/><br/>
-            <h2>{movie.title}</h2><br/>
+            <h2>{movie.title}</h2>
             <h4>Description:</h4> {movie.description}
             <p><b>Genre:</b> {movie.genre_name}</p>
             <p><b>Year Released:</b> {movie.year_released}</p>

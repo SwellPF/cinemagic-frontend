@@ -28,7 +28,7 @@ class CommentInput extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>Add Comment:</label>
-                    <input type='text' name='content' onChange={this.handleChange} value={this.state.content}/>
+                    <input type='text' size='60' name='content' onChange={this.handleChange} value={this.state.content}/>
                     <input type='submit'/>
                 </form>
             </div>
