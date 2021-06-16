@@ -1,5 +1,5 @@
 export const addComment = (content) => {
-    debugger
+    // debugger
     return (dispatch) => {
         fetch(`http://localhost:3000/api/v1/comments`, {
             headers: {
@@ -10,6 +10,6 @@ export const addComment = (content) => {
             body: JSON.stringify(content)
         })
         .then(response => response.json())
-        .then(movie => dispatch({type: 'ADD_COMMENT', payload: content}))
+        .then(comment => dispatch({type: 'ADD_COMMENT', payload: comment}))
     }
 }

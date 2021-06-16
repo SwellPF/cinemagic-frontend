@@ -24,6 +24,7 @@ class MovieInput extends React.Component {
         debugger
         event.preventDefault();
         this.props.addMovie(this.state)
+        this.props.history.push('/movies');
         this.setState({
             title: '',
             description: '',

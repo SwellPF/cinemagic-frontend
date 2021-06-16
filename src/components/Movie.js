@@ -14,7 +14,7 @@ const Movie = (props) => {
             <p><b>Genre:</b> {movie.genre_name}</p>
             <p><b>Year Released:</b> {movie.year_released}</p>
 
-           <b>Comments: </b>({movie.comments.length})<br/><br/>
+           <b>Comments: </b>({movie.comments.length ? movie.comments.length : "None yet. Be the first to comment on this movie!"})<br/><br/>
           <CommentsContainer movie={movie}/>
         </div>
     )

@@ -7,10 +7,10 @@ export default function movieReducer(state = {movies: [], comments: [],}, action
             return {...state, movies: [...state.movies, action.payload]}
 
         case 'ADD_COMMENT':
-            debugger
             const movies = state.movies.map(movie => {
-                if (movie.id === action.payload.movie_id) {
-                    return action.payload
+                // debugger
+                 if (movie.id === action.payload.movie_id) {
+                    return {...movie, comments: [...movie.comments, action.payload]}
                 } else {
                     return movie
                 }

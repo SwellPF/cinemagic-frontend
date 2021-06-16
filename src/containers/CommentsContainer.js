@@ -15,17 +15,17 @@ class CommentsContainer extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        comments: state.movies.comments
-    }
-}
+// const mapStateToProps = state => {
+//     return {
+//         comments: state.comments
+//     }
+// }
 
 const mapDispatchToProps = dispatch => ({
     addComment: comment => dispatch({type: 'ADD_COMMENT', comment}),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(CommentsContainer);
+export default connect(null, mapDispatchToProps)(CommentsContainer);
 
 CommentsContainer.defaultProps = {
     user_id: 1
