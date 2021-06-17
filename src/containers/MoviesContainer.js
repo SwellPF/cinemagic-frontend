@@ -5,6 +5,7 @@ import {fetchMovies} from '../actions/fetchMovies';
 import Movies from '../components/Movies';
 import Movie from '../components/Movie';
 import MovieInput from '../components/MovieInput';
+import MovieEdit from '../components/MovieEdit';
 import NavBar from '../components/NavBar';
 import MovieFilter from '../components/MovieFilter';
 
@@ -20,6 +21,7 @@ class MoviesContainer extends React.Component {
                 <NavBar/>
                 <Switch>
                     <Route path='/movies/new' component={MovieInput}/>
+                    <Route path='/movies/:id/edit' component={MovieEdit} />
                     <Route path='/movies/:id' render={(routerProps) => <Movie {...routerProps} movies={this.props.movies}/>}/>
                     <Route path='/movies' render={(routerProps) => <Movies {...routerProps} movies={this.props.movies}/>}/>
                 </Switch>
