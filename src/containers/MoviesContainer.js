@@ -6,6 +6,7 @@ import Movies from '../components/Movies';
 import Movie from '../components/Movie';
 import MovieInput from '../components/MovieInput';
 import NavBar from '../components/NavBar';
+import MovieFilter from '../components/MovieFilter';
 
 class MoviesContainer extends React.Component {
 
@@ -22,6 +23,7 @@ class MoviesContainer extends React.Component {
                     <Route path='/movies/:id' render={(routerProps) => <Movie {...routerProps} movies={this.props.movies}/>}/>
                     <Route path='/movies' render={(routerProps) => <Movies {...routerProps} movies={this.props.movies}/>}/>
                 </Switch>
+                <MovieFilter />
             </div>
         )
     }
@@ -29,7 +31,7 @@ class MoviesContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        movies: state.movies
+        movies: state.filter ? state.filteredMovies : state.movies
     }
 }
 

@@ -8,8 +8,5 @@ export function fetchMovies() {
              payload: movies
         }))
 
-        // fetch('http://localhost:3000/api/v1/movies')
-        // .then(response => response.json())
-        // .then(movies => console.log(movies))
     }
 }

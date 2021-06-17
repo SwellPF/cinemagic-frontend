@@ -24,7 +24,7 @@ class CommentInput extends React.Component {
     }
 
     render() {
-        return(
+        return (
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>Add Comment:</label>

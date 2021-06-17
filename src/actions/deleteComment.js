@@ -1,15 +1,14 @@
-export const deleteComment = (commentId, movieId) => {
+export const deleteComment = (comment) => {
 
     return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/comments`, {
+        fetch(`http://localhost:3000/api/v1/comments/${comment.id}`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            method: 'DELETE',
-            body: JSON.stringify(content)
+            method: 'DELETE'
         })
         .then(response => response.json())
-        .then(movie => dispatch({type: 'DELETE_COMMENT', payload: content}))
+        .then(comment => dispatch({type: 'DELETE_COMMENT', payload: comment}))
     }
 }

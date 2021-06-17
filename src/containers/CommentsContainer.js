@@ -15,12 +15,6 @@ class CommentsContainer extends React.Component {
     }
 }
 
-// const mapStateToProps = state => {
-//     return {
-//         comments: state.comments
-//     }
-// }
-
 const mapDispatchToProps = dispatch => ({
     addComment: comment => dispatch({type: 'ADD_COMMENT', comment}),
 })

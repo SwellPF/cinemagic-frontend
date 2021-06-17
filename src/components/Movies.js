@@ -1,6 +1,5 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
-import Movie from './Movie'
+import { Link } from 'react-router-dom';
 
 const Movies = (props) => {
     return (
