@@ -6,9 +6,18 @@ export default function movieReducer(state = {movies: [], filteredMovies: [], fi
         case 'ADD_MOVIE':
             return {...state, movies: [...state.movies, action.payload]}
 
+        case 'EDIT_MOVIE':
+            const index = state.movies.findIndex(movie => movie.id === action.payload.id)
+            return { 
+            ...state, 
+            movies: [
+                ...state.movies.slice(0, index), 
+                action.payload,
+                ...state.movies.slice(index + 1), 
+            ]}
+
         case 'ADD_COMMENT':
             const movies = state.movies.map(movie => {
-                // debugger
                  if (movie.id === action.payload.movie_id) {
                     return {...movie, comments: [...movie.comments, action.payload]}
                 } else {
