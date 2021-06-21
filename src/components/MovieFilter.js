@@ -34,7 +34,7 @@ class MovieFilter extends React.Component {
                             <option value='6'>Documentary</option>
                             <option value='7'>Fantasy</option>
                         </select>
-                        <input type="submit" />
+                        <input class='rounded-full bg-blue-500 py-.5 px-4' type="submit" />
                     </form>
                 </div>
             )
