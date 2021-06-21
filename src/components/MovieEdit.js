@@ -48,11 +48,11 @@ class MovieEdit extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <b>Editing Existing Movie</b><br/>
-                    <label><b>Title:</b></label>
+                    <label><b>Title:  </b></label>
                     <input class="bg-gray-100 focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-1/2 text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-0.5 pl-5 shadow bg-white rounded-lg h-10" type='text' placeholder='Movie Title' value={this.state.title} name='title' onChange={this.handleChange}/><br/>
-                    <br/><label><b>Description:</b></label>
+                    <br/><label><b>Description:  </b></label>
                     <input class="bg-gray-100 focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-1/2 text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-0.5 pl-5 shadow bg-white rounded-lg h-10" type='textarea' size="60" placeholder='Description' value={this.state.description} name='description' onChange={this.handleChange}/><br/>
-                    <br/><label><b>Genre:</b></label>
+                    <br/><label><b>Genre:  </b></label>
                     <select name="genre_id" onChange={this.handleChange} value={this.state.genre_id}>
                         <option value='1' >Action Adventure</option>                        
                         <option value='2'>Comedy</option>
@@ -62,9 +62,9 @@ class MovieEdit extends React.Component {
                         <option value='6'>Documentary</option>
                         <option value='7'>Fantasy</option>
                     </select><br/>
-                    <br/><label><b>Year Released:</b></label>
+                    <br/><label><b>Year Released:  </b></label>
                     <input class="bg-gray-100 focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-1/2 text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-0.5 pl-5 shadow bg-white rounded-lg h-10" type='text' placeholder='Year Released' value={this.state.year_released} name='year_released' onChange={this.handleChange}/><br/>
-                    <br/><label><b>Image URL:</b></label>
+                    <br/><label><b>Image URL:  </b></label>
                     <br/><input class="bg-gray-100 focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-1/2 text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-0.5 pl-5 shadow bg-white rounded-lg h-10" type='text' placeholder='Image URL' value={this.state.image_link} name='image_link' onChange={this.handleChange}/><br/>
                     <br/><input class='rounded-full bg-blue-500 py-.5 px-4' type='submit'/>
                 </form>
