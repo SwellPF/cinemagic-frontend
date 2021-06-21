@@ -1,7 +1,6 @@
 export default function movieReducer(state = {movies: [], filteredMovies: [], filter: '', comments: [], loading: false}, action) {
     switch(action.type) {
         case 'LOADING_MOVIES':
-            debugger
             return {
                 ...state,
                 movies: [...state.movies],

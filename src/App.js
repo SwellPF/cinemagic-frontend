@@ -14,7 +14,7 @@ class App extends React.Component {
     if(this.props.loading) {
       return <div>Loading... Please wait!</div>
     } else {
-      return <MoviesContainer />
+      return <MoviesContainer movies={this.props.movies}/>
     }
   }
 

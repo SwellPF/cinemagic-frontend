@@ -12,10 +12,6 @@ import About from '../components/About';
 
 class MoviesContainer extends React.Component {
 
-    componentDidMount() {
-        this.props.fetchMovies()
-    }
-
     render () {
         return (
             <div>
@@ -29,7 +25,6 @@ class MoviesContainer extends React.Component {
                     <Route path='/movies/:id' render={(routerProps) => <Movie {...routerProps} movies={this.props.movies}/>}/>
                     <Route path='/movies' render={(routerProps) => <Movies {...routerProps} movies={this.props.movies}/>}/>
                 </Switch>
-                <MovieFilter />
             </div>
         )
     }

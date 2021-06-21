@@ -16,7 +16,6 @@ class MovieFilter extends React.Component {
     }
 
     handleSubmit = (event) => {
-        debugger
         event.preventDefault();
         this.props.filterMovies(this.state)
     }

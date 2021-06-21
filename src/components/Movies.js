@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import MovieFilter from './MovieFilter';
 
 const Movies = (props) => {
     return (   
         
         <div>
+            <MovieFilter />
             {props.movies.map(movie =>
                 <span key={movie.id}>
                     <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
                 <br/></span>)}
+
         </div>
     )
 }
