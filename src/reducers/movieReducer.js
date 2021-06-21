@@ -1,7 +1,14 @@
-export default function movieReducer(state = {movies: [], filteredMovies: [], filter: '', comments: [],}, action) {
+export default function movieReducer(state = {movies: [], filteredMovies: [], filter: '', comments: [], loading: false}, action) {
     switch(action.type) {
+        case 'LOADING_MOVIES':
+            debugger
+            return {
+                ...state,
+                movies: [...state.movies],
+                loading: true
+            }
         case 'FETCH_MOVIES':
-            return {movies: action.payload}
+            return {...state, movies: action.payload, loading: false}
 
         case 'ADD_MOVIE':
             return {...state, movies: [...state.movies, action.payload]}
@@ -44,10 +51,8 @@ export default function movieReducer(state = {movies: [], filteredMovies: [], fi
                 
 
         case 'FILTER_MOVIES':
-        debugger    
         const filteredMovies = state.movies.filter(movie => movie.genre_id == action.payload.genre_id)
                 return {...state, filteredMovies, filter: action.payload.genre_id ? action.payload : ''}
-
 
         default:
             return state
