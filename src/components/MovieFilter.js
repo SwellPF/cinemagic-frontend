@@ -8,7 +8,7 @@ class MovieFilter extends React.Component {
     }
 
     handleChange = (event) => {
-        debugger
+        // debugger
         console.log(event.target.name)
         console.log(event.target.value)
         this.setState({
@@ -17,7 +17,6 @@ class MovieFilter extends React.Component {
     }
 
     handleSubmit = (event) => {
-        debugger
         event.preventDefault();
         console.log(this.state)
         this.props.filterMovies(this.state)

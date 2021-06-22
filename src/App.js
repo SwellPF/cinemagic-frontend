@@ -34,7 +34,7 @@ class App extends React.Component {
         <Route exact path='/movies/new' component={MovieInput}/>
         <Route exact path='/movies/:id/edit' render={(routerProps) => <MovieEdit {...routerProps} movies={this.props.movies}/>}/>
         <Route exact path='/movies/:id' render={(routerProps) => <Movie {...routerProps} movies={this.props.movies}/>}/>
-        <Route exact path='/movies' render={(routerProps) => <Movies {...routerProps} movies={this.props.movies}/>}/>
+        <Route exact path='/movies' render={(routerProps) => <MoviesContainer {...routerProps} movies={this.props.movies}/>}/>
         </Switch>
       </div></Router>
     );

@@ -6,7 +6,6 @@ const Movies = (props) => {
     return (   
         
         <div>
-            <MovieFilter />
             {props.movies.map(movie =>
                 <span key={movie.id}>
                     <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
