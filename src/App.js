@@ -19,17 +19,16 @@ class App extends React.Component {
     this.props.fetchMovies()
   }
   
-  handleLoading = () => {
-    if(this.props.loading) {
-      return <div>Loading... Lights! Camera! Action!</div>
-    } else {
-      return <MoviesContainer movies={this.props.movies}/>
-    }
-  }
+
 
   render () {
+    if (this.props.loading) {
+      return <div>Loading... Lights! Camera! Action!</div> 
+    }
+   
     return (
       <Router>
+        <NavBar />
         <div className="App">
         <Switch><Route path='/about' component={About}/>
         <Route exact path='/movies/new' component={MovieInput}/>
@@ -37,8 +36,6 @@ class App extends React.Component {
         <Route exact path='/movies/:id' render={(routerProps) => <Movie {...routerProps} movies={this.props.movies}/>}/>
         <Route exact path='/movies' render={(routerProps) => <Movies {...routerProps} movies={this.props.movies}/>}/>
         </Switch>
-        <NavBar />
-        {this.handleLoading()}
       </div></Router>
     );
   }

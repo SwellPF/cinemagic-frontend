@@ -13,7 +13,11 @@ class MoviesContainer extends React.Component {
                 {this.props.movies.map(movie =>
                 <span key={movie.id}>
                     <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-                <br/></span>)}
+                {/* <br/> */}
+                {/* <img src={`${movie.image_link}`} alt={movie.title}/> */}
+                {/* {' - '}{movie.genre_name}{' - '}{movie.year_released}<br/> */}
+                <br/></span>
+                )}
 
 
                 {/* <Movies movies={this.props.movies}/> */}

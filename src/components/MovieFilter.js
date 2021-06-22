@@ -8,6 +8,7 @@ class MovieFilter extends React.Component {
     }
 
     handleChange = (event) => {
+        debugger
         console.log(event.target.name)
         console.log(event.target.value)
         this.setState({
@@ -16,7 +17,9 @@ class MovieFilter extends React.Component {
     }
 
     handleSubmit = (event) => {
+        debugger
         event.preventDefault();
+        console.log(this.state)
         this.props.filterMovies(this.state)
     }
 
@@ -24,7 +27,7 @@ class MovieFilter extends React.Component {
             return (
                 <div>
                     <form onSubmit={this.handleSubmit}>
-                        <select class="bg-gray-100 focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-0.5 pl-3 shadow bg-white rounded-lg h-6 w-40" name="genre_id" onChange={this.handleChange}>
+                        <select name="genre_id" onChange={this.handleChange}>
                             <option value='' >All Movies</option>                        
                             <option value='1' >Action Adventure</option>                        
                             <option value='2'>Comedy</option>
@@ -34,7 +37,7 @@ class MovieFilter extends React.Component {
                             <option value='6'>Documentary</option>
                             <option value='7'>Fantasy</option>
                         </select>
-                        <input class='rounded-full bg-blue-500 py-.5 px-4' type="submit" />
+                        <input className='rounded-full bg-blue-500 py-.5 px-4' type="submit" />
                     </form>
                 </div>
             )
