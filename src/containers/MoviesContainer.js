@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import MovieFilter from '../components/MovieFilter';
 import Movies from '../components/Movies';
-import {Link} from 'react-router-dom';
 
 
 class MoviesContainer extends React.Component {

@@ -13,8 +13,8 @@ const Comments = (props) => {
     return (
         <div>
             {props.comments.map(comment =>
-                <li key={comment.id}>{comment.content}
-                <button class="rounded-full bg-red-500 py-.5 px-4" onClick={()=>handleDelete(comment)}>Delete</button>
+                <li key={comment.id}>{comment.content}{' '}
+                <button class="rounded-md border border-red-700 hover:bg-red-500 py-.5 px-4" onClick={()=>handleDelete(comment)}>Delete</button>
                 </li>)}
         </div>
     )

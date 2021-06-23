@@ -26,7 +26,8 @@ class MovieFilter extends React.Component {
             return (
                 <div>
                     <form onSubmit={this.handleSubmit}>
-                        <select name="genre_id" onChange={this.handleChange}>
+                        <label><b>Choose a movie category (or All Movies):  </b></label>
+                        <select className="border border-gray-300" name="genre_id" onChange={this.handleChange}>
                             <option value='' >All Movies</option>                        
                             <option value='1' >Action Adventure</option>                        
                             <option value='2'>Comedy</option>
@@ -36,7 +37,7 @@ class MovieFilter extends React.Component {
                             <option value='6'>Documentary</option>
                             <option value='7'>Fantasy</option>
                         </select>
-                        <input className='rounded-full bg-blue-500 py-.5 px-4' type="submit" />
+                        <input className="rounded-md border border-gray-500 hover:bg-blue-500 py-.5 px-4" type="submit" />
                     </form>
                 </div>
             )
