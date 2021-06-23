@@ -37,6 +37,8 @@ class MovieInput extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
+                <b>Add a New Movie</b><br/>
+
                     <label><b>Title:  </b></label>
                     <input type='text' className="bg-gray-100 focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-1/2 text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-0.5 pl-3 shadow bg-white rounded-lg h-18" placeholder='Movie Title' value={this.state.title} name='title' onChange={this.handleChange}/><br/>
                     <br/><label><b>Description:  </b></label>

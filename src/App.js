@@ -3,7 +3,6 @@ import React from 'react';
 import MoviesContainer from './containers/MoviesContainer';
 import { fetchMovies} from './actions/fetchMovies';
 import { connect } from 'react-redux';
-import Movies from './components/Movies';
 import Movie from './components/Movie';
 import MovieInput from './components/MovieInput';
 import MovieEdit from './components/MovieEdit';
