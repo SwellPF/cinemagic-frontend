@@ -13,15 +13,7 @@ let store = createStore(movieReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
   <Provider store={store}>
-    {/* <Router> */}
-        {/* <Switch><Route path='/about' component={About}/> */}
-        {/* <Route path='/movies/new' component={MovieInput}/> */}
-        {/* <Route path='/movies/:id/edit' render={(routerProps) => <MovieEdit {...routerProps} movies={this.props.movies}/>}/> */}
-        {/* <Route path='/movies/:id' render={(routerProps) => <Movie {...routerProps} movies={this.props.movies}/>}/> */}
-        {/* <Route path='/movies' render={(routerProps) => <Movies {...routerProps} movies={this.props.movies}/>}/> */}
-        {/* </Switch> */}
       <App />
-    {/* </Router> */}
   </Provider>,
   document.getElementById('root')
 );

@@ -2,11 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { deleteComment } from '../actions/deleteComment';
 
-
-
-
 const Comments = (props) => {
-    // debugger
     const handleDelete = comment => {
         props.deleteComment(comment)
     }
@@ -20,5 +16,4 @@ const Comments = (props) => {
     )
 }
     
-
 export default connect(null, {deleteComment})(Comments)
