@@ -10,7 +10,7 @@ const Movie = (props) => {
     
     // debugger
     return (
-        <div><div class="grid grid-cols-3 gap-4 py-6">   
+        <div><div className="grid grid-cols-3 gap-4 py-6">   
             <div className='col-span-1 mx-auto'><img src={movie.image_link} alt='movie-poster'/></div>
             <div className='col-span-2'>
                 <h2 className='text-left text-blue-700 font-bold text-3xl'>{movie.title}</h2>

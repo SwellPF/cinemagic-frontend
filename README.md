@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# CineMagic
+> An application that allows users to view a list of movies, filter by category and leave comments about the movie.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Features](#features)
+* [Status](#status)
+* [Inspiration](#inspiration)
+* [Contact](#contact)
 
-## Available Scripts
+## General info
+This application was built as my React/Redux project for Flatiron School.
 
-In the project directory, you can run:
+## Technologies
+* Ruby on Rails as backend (API)
+* JavaScript/React/Redux as frontend user interface
 
-### `yarn start`
+## Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Clone the Repositories
+```
+git clone git@github.com:swellpf/cinemagic-backend.git
+git clone git@github.com:swellpf/cinemagic-frontend.git
+```
+### Check your Ruby Version and update gems
+```
+ruby -v
+```
+From the cinemagic-backend directory, run 'bundle install' to update Ruby gems.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+### Initialize the database
+```
+rails db:create db:migrate db:seed
+```
+### Start Rails server
+```
+Open a terminal window and launch the Rails server using rails s.
+```
+Within a terminal window, navigate to the cinemagic-frontend directory and run 'npm start'.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Install/Update Node Package Manager
+```
+From the cinemagic-frontend directory, run 'npm install' to install/update JavaScript dependencies.
+```
 
-### `yarn build`
+## Features
+List of features ready and plans for future enhancement
+* Users can view a list of existing movies in the database
+* Users can filter the view of existing movies by genre
+* Users can add a new movie to the database and edit existing movies.
+* Users can add comments to any movie.
+* Users can delete comments from any movie.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Future Enhancements:
+* Add user login and authentication.
+* Comments will list the user and date/time a comment was added.
+* Users will only be able to delete comments that they have added (unless they are an administrator).
+* Add watchlist functionality so that users can create watchlists and add movies to those watchlists.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Status
+Project is: Stable and functional as of 6/25/2021.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Inspiration
+This application is my class project for Flatiron School to demonstrate my proficiency developing in React and Redux.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+Created by Paul Cinoman. You can contact me by email at [swellpf@gmail.com](mailto:swellpf@gmail.com). Check out my [Blog](http://www.pconthepc.com) - feel free to contact me!
