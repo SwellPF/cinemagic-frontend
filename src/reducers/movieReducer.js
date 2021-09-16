@@ -47,7 +47,7 @@ export default function movieReducer(state = {movies: [], filteredMovies: [], fi
             return {...state, movies: updatedMovies}             
 
         case 'FILTER_MOVIES':
-        const filteredMovies = state.movies.filter(movie => movie.genre_id == action.payload.genre_id)
+            const filteredMovies = state.movies.filter(movie => movie.genre_id == action.payload.genre_id)
                 return {...state, filteredMovies, filter: action.payload.genre_id ? action.payload : ''}
 
         default:

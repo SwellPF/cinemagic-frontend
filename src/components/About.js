@@ -16,7 +16,7 @@ const About = (props) => {
             <br/><br/>
             <b>Contact Information:</b>
             <p>Paul A. Cinoman</p>
-            <p>Email: swellpf@gmail.com</p>
+            <p>Email: paulcinoman@gmail.com</p>
             <p>Github: www.github.com/SwellPF</p>
         </div>
     )

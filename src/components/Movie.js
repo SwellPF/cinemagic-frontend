@@ -8,7 +8,6 @@ const Movie = (props) => {
     let movie = props.movies.filter(movie => movie.id == props.match.params.id)[0]
     console.log(movie)
     
-    // debugger
     return (
         <div><div className="grid grid-cols-3 gap-4 py-6">   
             <div className='col-span-1 mx-auto'><img src={movie.image_link} alt='movie-poster'/></div>
