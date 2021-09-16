@@ -23,7 +23,6 @@ const Movies = (props) => {
                         <div class="text-lg text-gray-800">{movie.year_released}</div>
                       </div>
                     </div>
-              
                   </div>
                 </div>
                 
